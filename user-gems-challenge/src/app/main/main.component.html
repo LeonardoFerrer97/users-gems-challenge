@@ -31,7 +31,7 @@
 		</div>
 		<div class="tweets-container">
 			<form [formGroup]="tweetForm" (ngSubmit)="createNewTweet()"  class="tweet-post">
-				<textarea formControlName="tweet" class="post-input" type="search" name="tweet" id="tweet" placeholder="What's happening?" cols="40" rows="5"></textarea>
+				<textarea formControlName="tweet"  maxlength="281" class="post-input" type="search" name="tweet" id="tweet" placeholder="What's happening?" cols="40" rows="5"></textarea>
 				<input class="file-upload-input" type="file" (change)="onAddImage($event);" accept="image/*">
 				<button type="submit">Tweet</button>
 			</form>
