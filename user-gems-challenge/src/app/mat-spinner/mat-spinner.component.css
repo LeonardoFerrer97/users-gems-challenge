@@ -1,0 +1,6 @@
+.transparent .mat-dialog-container {
+    box-shadow: none;
+    background: transparent
+}.mat-progress-spinner circle, .mat-spinner circle {
+    stroke: #3fb53f;
+    }

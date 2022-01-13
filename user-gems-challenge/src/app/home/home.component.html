@@ -1,0 +1,70 @@
+	<div class="index-background">
+    <form *ngIf="isLogin"[formGroup]="loginForm" (ngSubmit)="login()" class="login-container">
+			<img class="index-logo" src="assets/images/logo.png" alt="logo">
+			<h2 class="index-title">New Tweet</h2>
+			
+			<div class="input-container">
+				<input  id="email" class="input100" type="text" name="email" placeholder="Email" formControlName="email">
+				
+				<span class="icon-input">
+					<i class="fa fa-envelope" aria-hidden="true"></i>
+				</span>
+			</div>
+
+			<div class="input-container">
+				<input id="password" class="input100" type="password" name="pass" placeholder="Password" formControlName="password">
+				
+				<span class="icon-input">
+					<i class="fa fa-lock" aria-hidden="true"></i>
+				</span>
+			</div>
+			
+			<button type="submit" class="login-btn">Login</button>
+
+			<div class="create-account-containter">
+				<a (click) ="switch()"class="create-account">
+					Create your Account
+					<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+				</a>
+			</div>
+		</form>
+
+    <form *ngIf="!isLogin"[formGroup]="signUpForm" (ngSubmit)="signUp()" class="login-container">
+			<img class="index-logo" src="assets/images/logo.png" alt="logo">
+			<h2 class="index-title">New Tweet</h2>
+			
+			<div class="input-container">
+				<input  id="email" class="input100" type="text" name="email" placeholder="Email" formControlName="email">
+				
+				<span class="icon-input">
+					<i class="fa fa-envelope" aria-hidden="true"></i>
+				</span>
+			</div>
+
+			<div class="input-container">
+				<input id="password" class="input100" type="password" name="pass" placeholder="Password" formControlName="password">
+				
+				<span class="icon-input">
+					<i class="fa fa-lock" aria-hidden="true"></i>
+				</span>
+			</div>
+
+
+			<div class="input-container">
+				<input  id="name" class="input100" type="text" name="name" placeholder="UserName" formControlName="name">
+				
+				<span class="icon-input">
+					<i class="fa fa-envelope" aria-hidden="true"></i>
+				</span>
+			</div>
+			
+			<button type="submit" class="login-btn">SignUp</button>
+
+			<div class="create-account-containter">
+				<a (click) ="switch()"class="create-account">
+					Back to login
+					<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+				</a>
+			</div>
+		</form>
+  </div>

@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,800&display=swap');
+* {
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.body {
+    background: #e6e6e6;
+    overflow: auto;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 10%;
+	background-color: #24252a;
+	box-shadow: 4px 4px 25px hsl(0deg 0% 0% / 82%);
+}
+
+.logo {
+	cursor: pointer;
+	width: 50px;
+}
+
+.nav__links a,
+.cta,
+.overlay__content a {
+	font-weight: 500;
+	color: #edf0f1;
+	text-decoration: none;
+}
+.overlay__content li {
+	list-style: none;
+}
+
+.nav__links {
+	list-style: none;
+	display: flex;
+}
+
+.nav__links li {
+	padding: 0px 20px;
+}
+
+.nav__links li a {
+	transition: color 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+	color: #851755;
+    cursor: pointer;
+}
+
+.cta {
+	padding: 9px 25px;
+	background-color: #af2070;
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: background-color 0.3s ease 0s;
+}
+
+.cta:hover {
+	background-color: #851755;
+}
+
+
+/* Mobile Nav */
+
+.menu {
+	display: none;
+}
+
+.overlay {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 2;
+	left: 0;
+	top: 0;
+	background-color: #24252a;
+	overflow-x: hidden;
+	transition: width 0.5s ease 0s;
+}
+
+.overlay--active {
+	width: 100%;
+}
+
+.overlay__content {
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.overlay a {
+	padding: 15px;
+	font-size: 36px;
+	display: block;
+	transition: color 0.3s ease 0s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+	color: #851755;
+}
+
+.overlay .close {
+	position: absolute;
+	top: 20px;
+	right: 45px;
+	font-size: 60px;
+	color: #edf0f1;
+}
+
+@media screen and (max-height: 450px) {
+	.overlay a {
+		font-size: 20px;
+	}
+	.overlay .close {
+		font-size: 40px;
+		top: 15px;
+		right: 35px;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.logout, .nav-profile-icon-container, .nav-profile-icon {
+		display: none;
+	}
+	.menu {
+		display: initial;
+	}
+}
+
+.nav-profile-icon {
+	fill: #af2070;
+	transition: fill 0.3s ease 0s;
+	margin-left: 20px;
+}
+.nav-profile-icon:hover {
+	fill: #851755;
+	cursor: pointer;
+}
+.nav-right-container {
+	display: flex;
+    align-items: center;
+	min-width: 100px;
+}
+.nav-profile-icon-container {
+	display: flex;
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    margin-bottom: 10px;
+}
+.input100 {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #666666;
+    display: block;
+    width: 100%;
+    background: #e6e6e6;
+    height: 50px;
+    border-radius: 25px;
+    padding: 0 30px 0 68px;
+}
+.post-input {
+    outline: none;
+    border: none;
+    resize: none;
+}
+.icon-input {
+    font-size: 15px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    border-radius: 25px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: 35px;
+    pointer-events: none;
+    color: #666666;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+
+.tweets-container {
+    padding-left: 10vw;
+    padding-right: 10vw;
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+}
+
+.tweet-post {
+    display: grid;
+    justify-items: stretch;
+    margin: 5vw;
+    min-width: 250px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: rgb(100 100 111 / 80%) 5px 5px 20px 0px;
+}
+.tweet-post button {
+    color: #fff;
+    background-color: #af2070;
+    display: block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.575rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-top: 1rem;
+    margin-bottom: 20px;
+
+    min-width: 100px;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.tweet-post button:hover {
+    color: #fff;
+    background-color: #851755;
+    cursor: pointer;
+    box-shadow: rgb(100 100 111 / 80%) 5px 5px 20px 0px;
+}
+
+.tweet-post .post-input {
+    padding: 10px;
+    margin: 20px 20px 0px 20px;
+}
+
+.tweet-card {
+    margin: 20px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: flex-start;
+    box-shadow: rgb(100 100 111 / 80%) 5px 5px 20px 0px;
+}
+
+.tweet-card > img {
+    border-radius: 50%;
+    width: 80px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.tweet-card-body {
+    margin: 20px;
+}
+
+.card-content {
+    margin: 10px;
+}
+.card-content img {
+    max-width: 100%;
+}
+.file-upload-input {
+    padding: 10px;
+    margin: 20px 20px 0px 20px;
+}
+
+.retweet-btn:hover {
+    cursor: pointer;
+    color: #af2070;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.retweet-btn {
+    margin-left:50px
+}
+
+.author {
+    font-weight: 500;
+}
+.author:hover {
+    color: #af2070;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.tweets-container {
+    color: #333333;
+}
