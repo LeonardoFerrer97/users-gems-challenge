@@ -107,13 +107,13 @@ export class MainComponent implements OnInit {
       disableClose: true
     });
     this.tweetService.createTweet(newTweet).subscribe((tweet) => {
+      dialogRef.close(); 
       this.getTweets();
 
     }, error => { dialogRef.close(); })
   }
 
   retweetTweet(tweet) {
-    console.log(tweet)
     let retweet = new Retweet();
     retweet.createdAt = new Date();
     retweet.tweetId = tweet.id;
